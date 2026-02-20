@@ -519,9 +519,10 @@ function openCatalog(lang){
  slider.innerHTML="";
  index=0;
 
- for(let i=0;i<total;i++){
+ for(let i=1;i<total;i++){
   const img=document.createElement("img");
-  img.src=`catalogs/${lang}/${i}.jpg`;
+  const fileName = String(i).padStart(2, '0');
+  img.src = `catalogs/${lang}/${fileName}.jpg`;
   slider.appendChild(img);
  }
 
